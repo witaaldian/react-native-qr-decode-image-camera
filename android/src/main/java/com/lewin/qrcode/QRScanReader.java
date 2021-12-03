@@ -64,7 +64,7 @@ public class QRScanReader extends ReactContextBaseJavaModule  {
                             scanner.close();
                             
                             if (rawValues.isEmpty()) {
-                                promise.reject("NOT_OK", "No barcode found.");
+                                promise.reject("NOT_OK", "NO_QR_FOUND");
                             } else {
                                 promise.resolve(rawValues.get(0));
                             }
